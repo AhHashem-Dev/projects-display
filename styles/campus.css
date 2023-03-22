@@ -1,0 +1,246 @@
+/* navbar */
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.title-center {
+  background: var(--gray-1);
+  padding: 2rem;
+  height: auto;
+}
+
+.title-center h3 {
+  margin: 0 0;
+}
+
+.title-section::after {
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 100%;
+  background: var(--primary-6);
+}
+
+/* hero */
+
+.campus-hero {
+  margin-top: 1rem;
+}
+
+.campus-hero-featured {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 560px) {
+  .campus-hero-featured {
+    grid-template-columns: 90%;
+    gap: 1.5rem;
+  }
+}
+
+.campus-hero-activity {
+  border: 2px solid var(--primary-6);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.campus-hero-activity h4 {
+  margin: 0.25rem 0;
+}
+
+.campus-hero-activity-img-container {
+  position: relative;
+}
+
+.campus-hero-activity-img-container::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.campus-hero-activity-img-container:hover::after {
+  opacity: 1;
+}
+
+.campus-hero-activity-overlay {
+  position: absolute;
+  opacity: 0;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border: 2px solid var(--white);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.campus-hero-activity-img-container:hover .campus-hero-activity-overlay {
+  opacity: 1;
+  /* background: rgba(0, 0, 0, 0.7); */
+}
+
+.campus-hero-activity-img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  display: block;
+}
+
+.campus-hero-activity-title {
+  margin-top: 0.2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* filters */
+
+.campus-filters-activities {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-evenly;
+  gap: 1.5rem 0;
+}
+
+.campus-filters-activity {
+  border: 2px solid var(--primary-6);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.campus-filters-activity h4 {
+  margin: 0.25rem 0;
+}
+
+.campus-filters-activity-img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  display: block;
+}
+
+.campus-filters-activity-title {
+  margin-top: 0.2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.campus-filters-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.campus-filters-input-container {
+  display: flex;
+}
+
+.campus-filters-input-container h4 {
+  margin: 0;
+  margin-right: 1.5rem;
+  text-transform: capitalize;
+}
+
+.campus-input {
+  cursor: inherit;
+}
+
+.campus-input::placeholder {
+  font-family: "Kanit", sans-serif;
+}
+
+.campus-filters-filters-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campus-filters-filters-container h4 {
+  margin: 0;
+  margin-right: 1rem;
+  text-transform: capitalize;
+}
+
+.filters-btn {
+  margin-right: 0.35rem;
+}
+
+.campus-filters-activities {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 990px) {
+  .campus-filters-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .campus-filters-form {
+    gap: 1rem;
+  }
+
+  .campus-filters-form h4 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .campus-filters-form .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .campus-filters-form > * {
+    border-right: 2px solid var(--primary-6);
+    border-left: 2px solid var(--primary-6);
+  }
+
+  .campus-input {
+    width: 20vw;
+    height: 20%;
+    margin-bottom: 2rem;
+  }
+
+  .campus-filters-filters-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .campus-filters-filters-container-btns {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .campus-filters-filters-container-btns .btn {
+    margin: 0.35rem;
+  }
+
+  .campus-filters-activities {
+    grid-template-columns: repeat(2, 45%);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .campus-filters-activities {
+    grid-template-columns: 90%;
+  }
+}

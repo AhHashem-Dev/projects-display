@@ -1,0 +1,163 @@
+/* navbar */
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.title-center {
+  background: var(--gray-1);
+  padding: 2rem;
+  height: auto;
+}
+
+.title-center h3 {
+  margin: 0 0;
+  text-transform: capitalize;
+}
+
+.title-section::after {
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 100%;
+  background: var(--primary-6);
+}
+
+/* hero */
+
+.program-hero-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding: 0 2rem;
+}
+
+.program-hero-title :is(h2, h4) {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.program-hero-title h4 {
+  color: var(--gray-3);
+  text-transform: uppercase;
+}
+
+.program-hero-content {
+  display: grid;
+  gap: 0.5rem 2rem;
+  grid-template-columns: 60% 1fr;
+  grid-template-rows: auto 0.25rem auto 0.25rem;
+}
+
+.program-hero-desc {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.program-hero-img img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.program-hero-line-1 {
+  background: var(--primary-6);
+  grid-area: 2/1/3/3;
+  height: 100%;
+}
+
+.program-hero-stats {
+  grid-area: 3/1/4/3;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.program-hero-line-2 {
+  background: var(--primary-6);
+  grid-area: 4/1/5/3;
+  height: 100%;
+}
+
+.program-hero-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.program-hero-footer .btn {
+  padding: 0.575rem 1.5rem;
+}
+
+.application-status-btn {
+  cursor: auto;
+  border-color: var(--gray-5);
+  color: var(--gray-5);
+}
+
+.application-status-btn:hover {
+  border-color: var(--gray-5);
+  color: var(--gray-5);
+}
+
+.back-btn,
+.back-btn a {
+  color: var(--primary-6);
+}
+
+@media screen and (max-width: 560px) {
+  .program-hero-title {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .program-hero-title :is(h2, h4) {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .program-hero-title h4 {
+    color: var(--gray-3);
+    text-transform: uppercase;
+  }
+
+  .program-hero-content {
+    display: grid;
+    gap: 0.5rem 0;
+    grid-template-rows: auto auto 0.25rem auto 0.25rem;
+  }
+
+  .program-hero-desc {
+    grid-area: 1/1/2/4;
+  }
+
+  .program-hero-img {
+    grid-area: 2/1/3/3;
+    height: 30vh;
+  }
+
+  .program-hero-img img {
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  .program-hero-line-1 {
+    grid-area: 3/1/4/3;
+  }
+
+  .program-hero-stats {
+    grid-area: 4/1/5/3;
+  }
+
+  .program-hero-line-2 {
+    grid-area: 5/1/6/3;
+  }
+
+  .program-hero-footer {
+    gap: 1rem;
+  }
+}
