@@ -1,4 +1,4 @@
-import activitiesData from "../data/activities.json" assert { type: "json" };
+import activitiesData from "../data/activities";
 
 import select from "../utils/utils.js";
 

@@ -1,4 +1,4 @@
-import programsData from "./data/programs.json" assert { type: "json" };
+import programsData from "./data/programs";
 
 import select from "./utils/utils.js";
 
