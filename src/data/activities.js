@@ -1,4 +1,4 @@
-const date = [
+const data = [
   {
     name: "food canteen",
     location: "HQ",

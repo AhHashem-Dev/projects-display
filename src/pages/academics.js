@@ -1,4 +1,4 @@
-import programsData from "../data/programs";
+import programsData from "../data/programs.js";
 
 import select from "../utils/utils.js";
 

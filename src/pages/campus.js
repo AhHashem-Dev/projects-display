@@ -1,4 +1,4 @@
-import activitiesData from "../data/activities";
+import activitiesData from "../data/activities.js";
 
 import select from "../utils/utils.js";
 
